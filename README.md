@@ -20,4 +20,5 @@ The notes here are exploratory. They try to keep three layers separate:
 
 - [Blackhole-Eigenlight-Simulator (LRD)](Blackhole-Eigenlight-Simulator-LRD/) —
   a minified browser simulation for the LRD black-hole eigenlight picture, with
-  helper overlays hidden by default.
+  helper overlays hidden by default. GitHub Pages:
+  <https://georglegato.github.io/papers/>
