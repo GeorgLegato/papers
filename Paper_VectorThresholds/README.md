@@ -97,7 +97,7 @@ move when the nonlocal charm model is included.
 
 ## 2. MELT Basics Needed Here
 
-Only three pieces of MELT bookkeeping are needed for this note.
+Four pieces of MELT bookkeeping are needed for this note.
 
 ### 2.1 Born Readout
 
@@ -170,67 +170,82 @@ local refit of the unbinned data) is required before this comparison can be
 promoted from "scale check" to "quantitative claim." The structural arguments
 of this note do not depend on it.
 
-### 2.4 The 2×2 Hermitian (V, A) ledger
+### 2.4 The rate-only diagonal projection
 
-The Born-readout language used loosely in §2.1 has a sharp, mechanistic form
-in this analysis. The rate-level Wilson observable can be written as the
-trace of a $2\times 2$ Hermitian matrix in the $(V,A)$ basis,
-
-$$
-H_{VA}\;=\;
-\begin{pmatrix}
-|C_V|^2 & C_V^{\ast}C_A \\
-C_A^{\ast}C_V & |C_A|^2
-\end{pmatrix},
-$$
-
-where the diagonal carries the moduli and the off-diagonal carries the
-relative $V$–$A$ phase. The differential decay rate (Eq. 2 of
-arXiv:2603.12477) has three operator pieces with distinct $\cos\theta_\ell$
-dependence:
-
-- $|C_A|^2\,f^2(q^2)$ — angular-independent;
-- $|C_V|^2\,(1-\beta_+^2\cos^2\theta_\ell)\,f^2(q^2)$ — even in $\cos\theta_\ell$;
-- $2\,\mathrm{Re}(C_V^{\ast}C_A)\,\cos\theta_\ell\,f^2(q^2)$ — odd in
-  $\cos\theta_\ell$.
-
-When the rate is reduced to the $m_{\mu\mu}$ spectrum by integrating over
-$\cos\theta_\ell$, the odd cross-term vanishes identically because
+The Born-readout language of §2.1 has a concrete operational form in this
+analysis, but not via an angular $V$–$A$ interference. In $B\to K$ (two
+pseudoscalars), the hadronic side admits no axial-vector form factor; the
+lepton-side $V$ and $A$ pieces enter the squared amplitude as
+**independent moduli, with no rate-level cross-term**. The differential
+rate (Eq. 19 of arXiv:2603.12477) is
 
 $$
-\int_{-1}^{+1}\cos\theta_\ell\,d\cos\theta_\ell\;=\;0.
+\frac{d^2\Gamma_\mu}{dq^2\,d\cos\theta_\ell}\;\propto\;
+|k|^2\beta_+^2(1-\cos^2\theta_\ell)\,|C_A|^2\,f_+^2
+\;+\;\frac{m_\mu^2(M_B^2-M_K^2)^2}{q^2\,M_B^2}\,|C_A|^2\,f_0^2
+\;+\;|k|^2(1-\beta_+^2\cos^2\theta_\ell)\,|C_V^{\mathrm{eff}}\,f_+ +
+2(C_7^{\mathrm{eff}}+C_7')\tfrac{m_b+m_s}{M_B+M_K}\,f_T|^2,
 $$
 
-What survives is the trace $\mathrm{tr}\,H_{VA}=|C_V|^2+|C_A|^2$ up to
-kinematic factors, i.e. **the rate-only fit reads exactly the Born
-projection of $H_{VA}$**. The off-diagonal $\mathrm{Re}(C_V^{\ast}C_A)$ is
-not "diagonalised away" algebraically — it is operationally erased by
-angular marginalisation. The annulus structure visible in Fig. 4 is a
-geometric identity of this projection, not a fitting choice.
+with **no term linear in $\cos\theta_\ell$**. The LHCb paper notes this
+explicitly: a $\cos\theta_\ell$-linear (forward-backward-asymmetry-like)
+term would require scalar, pseudoscalar, or tensor Wilson coefficients
+that this analysis does not include. The reason is hadronic: between two
+pseudoscalars the $V$–$A$ interference contracts with a symmetric
+hadronic tensor and vanishes by Lorentz structure.
 
-This separates the LHCb Wilson-coefficient analyses cleanly into two
-complementary halves of the same ledger:
+Integrating over $\cos\theta_\ell$ produces the $q^2$-only spectrum used in
+the fit, schematically
 
-| Observable | Channel | Reads | $H_{VA}$ component |
-|---|---|---|---|
-| rate-only $m_{\mu\mu}$ spectrum | $B^+\to K^+\mu^+\mu^-$ (this analysis) | $|C_V|^2+|C_A|^2$ | diagonal |
-| angular distribution ($P_5'$, $A_\mathrm{FB}$, $F_L$, $S_3$, …) | $B^0\to K^{\ast 0}\mu^+\mu^-$ | $\mathrm{Re}(C_V^{\ast}C_A)$ and related | off-diagonal |
+$$
+\frac{d\Gamma_\mu}{dq^2}\;\propto\;a(q^2)\,|C_A|^2\;+\;b(q^2)\,|C_V^{\mathrm{eff}}|^2,
+$$
 
-The well-known $B^0\to K^{\ast 0}\mu^+\mu^-$ angular anomalies of recent
-years live in the off-diagonal half. The two analyses do not measure the
-same observable; they measure complementary entries of the same $2\times 2$
-Hermitian. This is the direct experimental form of the MELT Born/off-diagonal
-split applied to flavour physics: the rate analysis is the diagonal
-projection, the angular analysis recovers the phase that the rate analysis
-necessarily loses.
+with $C_V^{\mathrm{eff}}=C_V+(\text{q}^2\text{-dependent nonlocal and }C_7\text{ pieces})$.
+**There is no $V$–$A$ cross-term in the rate-only fit.** The annular shape
+of the $(C_V,C_A)$ likelihood is the iso-rate contour of
 
-A consequence for this note: the annulus of Fig. 4 is unavoidable, not
-diagnostic of new physics. Any rate-only fit of $H_{VA}$ over a binary
-$(V,A)$ basis must produce it. The diagnostic content sits elsewhere — in
-the radius (overall Wilson-coefficient deficit), in the threshold step
-($X(3872)$-like nonlocal structure), in the $C_A(q^2)$ drift, and in the
-off-diagonal half of the ledger as read by angular $B^0\to K^{\ast 0}\mu\mu$
-analyses.
+$$
+a\,|C_V|^2 + b\,|C_A|^2\;\approx\;\mathrm{const},
+$$
+
+which after $q^2$-integration has $\langle a\rangle$ and $\langle b\rangle$
+of the same order, giving an approximate circle. In MELT-Born language: the
+rate-only fit reads two independent moduli; the relative phase between $C_V$
+and $C_A$ does not enter.
+
+What recovers $C_V$ vs $C_A$ direction is **not** an angular variable —
+there is none in this decay — but the $m_{\mu\mu}$-spectrum *shape*. The
+nonlocal amplitudes $Y_{c\bar c}(q^2)$ (charm loops, $\psi$ resonances) and
+$Y_\mathrm{light}(q^2)$ ($\rho/\omega/\phi$) inside $C_V^\mathrm{eff}$ carry
+nontrivial $q^2$-dependent phases. $C_V$ interferes with these complex
+amplitudes in a way that depends on $m_{\mu\mu}$, and the fit picks up the
+orientation in $(C_V,C_A)$-space from how this interference shapes the
+spectrum. This is what the LHCb paper means by "the fit distinguishes
+between $C_V$ and $C_A$ through the interference of $C_V$ with the nonlocal
+amplitudes." The Born-readout reading is correct in spirit — *modulus from
+the rate, phase from elsewhere* — but the "elsewhere" here is the
+$m_{\mu\mu}$-shape via nonlocal-amplitude interference, not a $\cos\theta_\ell$
+angular variable.
+
+A note on $B^0\to K^{\ast 0}\mu^+\mu^-$ angular analyses ($P_5'$,
+$A_\mathrm{FB}$, $F_L$, $S_3$, …): the $K^{\ast}$ is a vector meson, so the
+hadronic tensor has seven form factors and the amplitude decomposes into
+transversity amplitudes ($A_\perp$, $A_\parallel$, $A_0$). Wilson
+coefficients enter those transversity amplitudes in richer combinations
+than they do in the $B\to K$ rate, and the angular asymmetries probe
+Wilson information not visible here. We mention this only as an indication
+that the Wilson-coefficient ledger is fuller than what the $B^+\to K^+\mu\mu$
+rate-only annulus shows; we do not claim that the $K^{\ast}$ angular
+observables are a direct readout of a single $\mathrm{Re}(C_V^{\ast}C_A)$
+matrix element.
+
+A consequence for this note: the annulus of Fig. 4 is the unavoidable shape
+of any rate-only fit over $(C_V,C_A)$ when the two enter as independent
+moduli with comparable kinematic weights. It is not diagnostic of new
+physics. The diagnostic content sits elsewhere — in the radius (overall
+Wilson-coefficient deficit), in the threshold step ($X(3872)$-like nonlocal
+structure), and in the $C_A(q^2)$ drift.
 
 ## 3. The LHCb Result as a MELT Ledger
 
@@ -244,16 +259,17 @@ The working map is:
 | $DD^{\ast}-J/\psi\simeq\rho$ | $X(3872)$ at threshold | mode-lock explains vector selection | known physics, MELT framing |
 | $\Delta C_V \approx 0.873$ | vector coefficient deficit | $\approx 1$ ballast bit missing | scale check, not test |
 
-The annular part is the conceptual lead, and §2.4 makes it sharp: the
-rate-only short-distance constraint is literally
-$\mathrm{tr}\,H_{VA}=|C_V|^2+|C_A|^2$, with the off-diagonal $V$–$A$ phase
-erased by integration over $\cos\theta_\ell$. The fit initially knows only
-the radius and recovers orientation through interference against nonlocal
-amplitudes. **This is the only argument here that does not depend on a
-fitted number;** an annulus would appear in any $B^+\to K^+\ell^+\ell^-$
-rate constraint, regardless of fit point. It is the unavoidable shadow of
-projecting a $2\times 2$ Hermitian observable onto its trace. Angular
-analyses of related decays read the complementary off-diagonal half.
+The annular part is the conceptual lead, and §2.4 fixes the mechanism: the
+rate-only short-distance constraint is the iso-contour of $a(q^2)|C_V|^2 +
+b(q^2)|C_A|^2$, integrated over $q^2$ with comparable weights. $V$ and $A$
+enter as independent moduli; there is no rate-level $V$–$A$ cross-term in
+$B\to K\mu\mu$. The orientation in $(C_V,C_A)$-space is recovered from
+$m_{\mu\mu}$-shape interference of $C_V$ with the complex nonlocal
+amplitudes (the $C_V^\mathrm{eff}$ structure). **This argument does not
+depend on a fitted number;** an annulus appears in any rate-only
+$B^+\to K^+\ell^+\ell^-$ constraint where $V$ and $A$ have similar
+integrated kinematic weights. It is the unavoidable shape of two
+independent moduli with comparable coefficients, not a fit choice.
 
 For scale, the SM and fit radii in coefficient space are
 
