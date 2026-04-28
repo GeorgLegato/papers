@@ -3,19 +3,25 @@
 This repository collects compact working papers around **MELT** —
 *Minimale Erhaltungs- und Landauer-Topologie* ("Minimal Conservation and
 Landauer Topology"). MELT is a speculative information-geometry framework
-that tries to read physical measurements as transitions between an
-information-bookkeeping ledger (CPⁿ blocks, Born/off-diagonal phases,
-Landauer bits) and the observable scalar quantities they project to.
+built on a single norm: a **quantum-bit / energy correspondence**, in
+which physical states carry an information content measured in bits and
+the Landauer cost k_B·T·ln 2 per bit fixes the conversion to energy. Every
+observable is read as a projection from this bit-energy ledger.
 
-Three ingredients, no free parameters:
+Two ingredients, no free parameters:
 
-1. **CPⁿ cascade** — CP¹(3b) → CP²(7b) → … → CP⁶(127b), summing to 137,
-   read as the structural origin of α⁻¹.
-2. **Landauer bookkeeping** — bit erasure costs energy; the dimensionless
-   correction δ ≈ 0.036 is fixed by self-consistency, not fit.
-3. **Born / off-diagonal split** — the modulus-squared readout is treated
-   as a projection that loses a directed phase; the lost phase is what
-   MELT tries to make explicit.
+1. **Bit–energy norm.** Physical states have a discrete information
+   content. Storing or erasing one bit has a thermodynamic cost
+   (Landauer's principle). MELT promotes this from a metaphor to a
+   bookkeeping rule: branching ratios are Shannon entropies of bit-erasure
+   events, decay Q-values are Landauer heat, and observable energies are
+   read as bit-counts times a unit cost.
+
+2. **Born / off-diagonal split.** The modulus-squared readout (Born rule)
+   keeps the diagonal of an underlying complex or Hermitian observable and
+   erases a directed phase. MELT tries to make the lost phase explicit and
+   recoverable from interferences and shape information that survive the
+   projection — angular distributions, threshold steps, q²-shape, etc.
 
 The notes here are exploratory working notes, not formal submissions. They
 try to keep three layers separate:
