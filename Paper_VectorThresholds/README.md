@@ -23,14 +23,14 @@ the local MELT bookkeeping rules? Three structures stand out. First, the
 two-dimensional likelihood in $(C_V,C_A)$ is annular because the short-distance
 branching fraction constrains mainly $C_V^2+C_A^2$; this is exactly the
 observable shape expected from a Born-style modulus readout. Second, the
-paper reports a step-like vector response at the open-charm $DD^*$ threshold,
-$\Delta_{DD^*}=-1.37\pm0.53$, while a simple binned count model does not see
+paper reports a step-like vector response at the open-charm $DD^{\ast}$ threshold,
+$\Delta_{DD^{\ast}}=-1.37\pm0.53$, while a simple binned count model does not see
 a standalone bump. This supports the reading that the effect lives in the
 operator/amplitude ledger rather than in raw event counts. Third, the
 threshold arithmetic is unusually sharp:
 
 $$
-m_{DD^*}-m_{J/\psi}=775.05\,\mathrm{MeV},\qquad
+m_{DD^{\ast}}-m_{J/\psi}=775.05\,\mathrm{MeV},\qquad
 m_{\rho}=775.26\,\mathrm{MeV}.
 $$
 
@@ -72,7 +72,7 @@ The headline numbers used in this note are:
 | $C_V^\mathrm{fit}$ | $\approx 3.4$ | preferred vector value |
 | $C_A^\mathrm{fit}$ | $\approx -3$ | preferred axial value |
 | $C_A(q^2)$ slope | $b=-0.090\pm0.045$ | residual scale drift |
-| $C_V$ step at $DD^*$ | $\Delta_{DD^*}=-1.37\pm0.53$ | threshold response |
+| $C_V$ step at $DD^{\ast}$ | $\Delta_{DD^{\ast}}=-1.37\pm0.53$ | threshold response |
 
 The reported Standard Model tension is not a single invariant headline. With
 HPQCD form factors LHCb quotes about $4.0\sigma$; with FNAL/MILC form factors
@@ -159,9 +159,9 @@ The working map is:
 |---|---|---|
 | annular $(C_V,C_A)$ likelihood | rate fixes $C_V^2+C_A^2$ | Born-like modulus readout |
 | lower $C_V$ | vector coefficient deficit | one bridge/ballast unit missing |
-| $DD^*$ step in $C_V$ | vector threshold response | CP³→CP⁴ channel opens |
+| $DD^{\ast}$ step in $C_V$ | vector threshold response | CP³→CP⁴ channel opens |
 | $C_A(q^2)$ slope | axial coefficient not fully local | incomplete coarse-graining |
-| $DD^*-J/\psi\simeq\rho$ | light-vector mode lock | explains vector, not scalar, selector |
+| $DD^{\ast}-J/\psi\simeq\rho$ | light-vector mode lock | explains vector, not scalar, selector |
 
 The annular part is the conceptual bridge. In ordinary operator language,
 the short-distance branching fraction constrains the combination
@@ -190,7 +190,7 @@ $$
 That is close to the size of the reported threshold step:
 
 $$
-\frac{\Delta R}{|\Delta_{DD^*}|}
+\frac{\Delta R}{|\Delta_{DD^{\ast}}|}
 =\frac{1.433}{1.37}
 \approx1.046.
 $$
@@ -204,14 +204,14 @@ reported vector threshold gate live on the same scale.
 The strongest compact observation is pure mass arithmetic:
 
 $$
-m_{DD^*}=3871.70\,\mathrm{MeV},\qquad
+m_{DD^{\ast}}=3871.70\,\mathrm{MeV},\qquad
 m_{J/\psi}=3096.65\,\mathrm{MeV}.
 $$
 
 Therefore
 
 $$
-m_{DD^*}-m_{J/\psi}=775.05\,\mathrm{MeV}.
+m_{DD^{\ast}}-m_{J/\psi}=775.05\,\mathrm{MeV}.
 $$
 
 The $\rho(770)$ mass is approximately
@@ -223,13 +223,13 @@ $$
 So the difference is
 
 $$
-(m_{DD^*}-m_{J/\psi})-m_\rho=-0.21\,\mathrm{MeV},
+(m_{DD^{\ast}}-m_{J/\psi})-m_\rho=-0.21\,\mathrm{MeV},
 $$
 
 or a relative ratio of about $0.999729$.
 
 This matters because LHCb's reported threshold response is in $C_V$, the
-vector coefficient. The open-charm $DD^*$ threshold is almost exactly one
+vector coefficient. The open-charm $DD^{\ast}$ threshold is almost exactly one
 light-vector quantum above $J/\psi$. In a conservative Standard Model reading
 this is a notable alignment of thresholds and vector resonances. In the MELT
 reading it is the proposed reason the anomaly selects a vector operator rather
@@ -238,14 +238,14 @@ than a scalar one: the threshold opens as a mode-locked vector gate.
 There is a second, weaker charm-ladder marker:
 
 $$
-m_{DD^*}-m_{DD}=142.02\,\mathrm{MeV},
+m_{DD^{\ast}}-m_{DD}=142.02\,\mathrm{MeV},
 $$
 
 $$
-m_{D^*D^*}-m_{DD^*}=142.00\,\mathrm{MeV}.
+m_{D^{\ast}D^{\ast}}-m_{DD^{\ast}}=142.00\,\mathrm{MeV}.
 $$
 
-This is simply the repeated $D^*-D$ spin gap. In MELT language it may echo the
+This is simply the repeated $D^{\ast}-D$ spin gap. In MELT language it may echo the
 real leg of the local $\Delta=14+28i$ ledger at a factor of ten, but this is
 only a weak marker. The $\rho$ lock is much cleaner.
 
@@ -267,8 +267,8 @@ A naive side-window scan is useful only as a diagnostic. It shows:
 | Marker | Raw side-window result |
 |---|---:|
 | $J/\psi$ symmetric check | $\log_2(R/L)=-0.023$ |
-| $DD^*$, 50 MeV windows | $\log_2(R/L)=-0.459$ |
-| $DD^*$, 100 MeV windows | $\log_2(R/L)=-0.714$ |
+| $DD^{\ast}$, 50 MeV windows | $\log_2(R/L)=-0.459$ |
+| $DD^{\ast}$, 100 MeV windows | $\log_2(R/L)=-0.714$ |
 
 The $DD$ and $\psi(3770)$ windows are contaminated by the huge $\psi(2S)$ tail
 on the left side, so their raw count jumps should not be interpreted as
@@ -276,7 +276,7 @@ threshold physics.
 
 A deliberately crude binned Poisson smoke test was also run over
 $3760$ to $4250\,\mathrm{MeV}/c^2$. It compared a smooth continuum plus broad
-Gaussian resonance anchors with and without a sigmoid step at $DD^*$. The
+Gaussian resonance anchors with and without a sigmoid step at $DD^{\ast}$. The
 fitted step direction was negative, but the added step was not favored by
 AIC/BIC:
 
@@ -288,7 +288,7 @@ $$
 with fitted step amplitude $-0.590$ in that crude model.
 
 This is not a contradiction of the LHCb result. It is the useful lesson. The
-$DD^*$ effect is not a raw histogram bump. It is an amplitude-level
+$DD^{\ast}$ effect is not a raw histogram bump. It is an amplitude-level
 Wilson/nonlocal effect. That is precisely why it is interesting as a MELT
 ledger object.
 
@@ -299,7 +299,7 @@ failure modes.
 
 It weakens if:
 
-1. a reproduction of the LHCb likelihood absorbs the $DD^*$ step into smooth
+1. a reproduction of the LHCb likelihood absorbs the $DD^{\ast}$ step into smooth
    charm-loop modeling;
 2. the step moves away from the vector coefficient when alternative form
    factors are used;
@@ -309,7 +309,7 @@ It weakens if:
 
 It strengthens if:
 
-1. the $DD^*$ response remains vector-specific;
+1. the $DD^{\ast}$ response remains vector-specific;
 2. the threshold gate persists under HPQCD/FNAL-MILC variations;
 3. analogous $J/\psi+\rho$ or vector-mode locks appear in related
    $b\to s\mu^+\mu^-$ channels;
@@ -319,7 +319,7 @@ It strengthens if:
 The next technical step is not another verbal interpretation. It is a
 minimal amplitude-level reproduction over the charm window using the published
 efficiency and resolution curves: smooth continuum, $\psi(2S)$,
-$\psi(3770)$, $\psi(4040)$, $\psi(4160)$, and a $DD^*$ sigmoid gate, compared
+$\psi(3770)$, $\psi(4040)$, $\psi(4160)$, and a $DD^{\ast}$ sigmoid gate, compared
 by likelihood rather than by raw counts. Only then should the $0.873$ vector
 deficit and the $0.8901$ ballast marker be promoted from "numerical hook" to
 "quantitative claim."
