@@ -2,10 +2,11 @@
 
 ## A compact reading of LHCb arXiv:2603.12477
 
-**Draft status:** working note, April 2026  
-**Target length:** 4-6 pages  
-**Primary paper:** LHCb arXiv:2603.12477  
-**Public data:** LHCb Zenodo DOI `10.5281/zenodo.19497184`  
+**Status:** working note / MELT Rechenbeispiel, April 2026.
+Loose public deployment, no formal submission.
+**Primary paper read here:** LHCb arXiv:2603.12477 (LHCb-PAPER-2025-055).
+**Public LHCb dataset used for diagnostics:** Zenodo DOI `10.5281/zenodo.19497184`
+(LHCb's own data release, not this note).
 
 ### Abstract
 
@@ -19,25 +20,31 @@ Standard Model value, with the stated tension depending strongly on the
 chosen lattice-QCD form factors.
 
 This note asks a narrower question: how does the result look when read through
-the local MELT bookkeeping rules? Three structures stand out. First, the
-two-dimensional likelihood in $(C_V,C_A)$ is annular because the short-distance
-branching fraction constrains mainly $C_V^2+C_A^2$; this is exactly the
-observable shape expected from a Born-style modulus readout. Second, the
-paper reports a step-like vector response at the open-charm $DD^{\ast}$ threshold,
-$\Delta_{DD^{\ast}}=-1.37\pm0.53$, while a simple binned count model does not see
-a standalone bump. This supports the reading that the effect lives in the
-operator/amplitude ledger rather than in raw event counts. Third, the
-threshold arithmetic is unusually sharp:
+the local MELT bookkeeping rules? Two robust structures and one suggestive
+mass coincidence stand out. First, the two-dimensional likelihood in
+$(C_V,C_A)$ is annular because the short-distance branching fraction
+constrains mainly $C_V^2+C_A^2$; this is the observable shape expected from a
+Born-style modulus readout, and is a structural prediction independent of any
+fit. Second, the paper reports a step-like vector response at the open-charm
+$DD^{\ast}$ threshold, $\Delta_{DD^{\ast}}=-1.37\pm0.53$, while a simple binned
+count model does not see a standalone bump; the effect lives in the
+operator/amplitude ledger rather than in raw event counts.
+
+The third element is a threshold arithmetic that is unusually sharp:
 
 $$
 m_{DD^{\ast}}-m_{J/\psi}=775.05\,\mathrm{MeV},\qquad
-m_{\rho}=775.26\,\mathrm{MeV}.
+m_{\rho}=775.26\,\mathrm{MeV},
 $$
 
-Thus the reported vector-sector gate opens almost exactly at
-$J/\psi+\rho(770)$. In MELT terms this is a candidate mode-lock between the
-hidden charm carrier and a light vector quantum, occurring at the CP³
-hadron-bus to CP⁴ domain-wall transition.
+i.e. the open-charm threshold sits one $\rho(770)$ quantum above $J/\psi$. We
+note that this near-coincidence has an established physical anchor: the
+exotic state $X(3872)$ has $m=3871.64\pm0.06\,\mathrm{MeV}$, matching
+$m_{DD^{\ast}}=3871.69\,\mathrm{MeV}$ within PDG precision, and $X(3872)\to
+J/\psi\,\rho$ is a documented decay channel. The MELT reading is that the
+reported vector gate at $DD^{\ast}$ opens exactly at the $J/\psi+\rho$
+mode-lock realised physically by the $X(3872)$, at the CP³ hadron-bus to CP⁴
+domain-wall transition.
 
 ![MELT map for the LHCb threshold ledger](figures/fig1-lhcb-melt-ledger.svg)
 
@@ -69,10 +76,17 @@ The headline numbers used in this note are:
 |---|---:|---|
 | $C_V^\mathrm{SM}$ | $4.273$ | SM vector anchor |
 | $C_A^\mathrm{SM}$ | $-4.166$ | SM axial anchor |
-| $C_V^\mathrm{fit}$ | $\approx 3.4$ | preferred vector value |
-| $C_A^\mathrm{fit}$ | $\approx -3$ | preferred axial value |
-| $C_A(q^2)$ slope | $b=-0.090\pm0.045$ | residual scale drift |
-| $C_V$ step at $DD^{\ast}$ | $\Delta_{DD^{\ast}}=-1.37\pm0.53$ | threshold response |
+| $C_V^\mathrm{fit}$ | $\approx 3.4 \pm 0.2$ | best-fit vector value, read from Fig. 4 |
+| $C_A^\mathrm{fit}$ | $\approx -3.0 \pm 0.2$ | best-fit axial value, read from Fig. 4 |
+| $C_A(q^2)$ slope | $b=-0.090\pm0.045$ | residual scale drift, $\sim 2\sigma$ |
+| $C_V$ step at $DD^{\ast}$ | $\Delta_{DD^{\ast}}=-1.37\pm0.53$ | threshold response, $\sim 2.6\sigma$ |
+
+LHCb quotes $\Delta_{DD^{\ast}}$, $\Delta_{J/\psi}=0.41\pm0.24$, and the
+$C_A(q^2)$ slope as explicit numerical results. The absolute best-fit
+$(C_V,C_A)$ are not given as scalars in the paper text; we read them from the
+2D likelihood surface in Fig. 4 with an estimated reading uncertainty of
+$\pm 0.2$. That uncertainty propagates into every comparison below; we mark
+where it bites.
 
 The reported Standard Model tension is not a single invariant headline. With
 HPQCD form factors LHCb quotes about $4.0\sigma$; with FNAL/MILC form factors
@@ -133,131 +147,167 @@ Wilson coefficients that separate vector and axial operator channels.
 
 ### 2.3 Ballast Bit
 
-A recurring local anchor is a first-split ballast value near $0.8901$ bit.
-Here it is not used as proof. It is used as a scale marker for the vector
-deficit:
+A recurring MELT anchor is the first-split Shannon entropy of $K_S\to\pi\pi$,
+$H_1=0.8901$ bit, which appears as a "ballast" value across several
+hadron/lepton splits. We do not use it as proof. We use it only as a scale
+check on the vector deficit:
 
 $$
 \Delta C_V = C_V^\mathrm{SM}-C_V^\mathrm{fit}
-\approx 4.273-3.4=0.873.
+\approx 4.273-3.4 = 0.87 \pm 0.2,
 $$
 
-Thus
+so
 
 $$
-\frac{\Delta C_V}{0.8901}\approx0.981.
+\frac{\Delta C_V}{0.8901}\approx 0.98 \pm 0.2.
 $$
 
-This is close enough to motivate a ledger comparison, but it must be checked
-against the exact likelihood tables before becoming a quantitative claim.
+The ratio is consistent with one within the reading uncertainty on
+$C_V^\mathrm{fit}$, but it is not a discriminating test on its own. Reducing
+the reading uncertainty (either from a likelihood-table extraction or from a
+local refit of the unbinned data) is required before this comparison can be
+promoted from "scale check" to "quantitative claim." The structural arguments
+of this note do not depend on it.
 
 ## 3. The LHCb Result as a MELT Ledger
 
 The working map is:
 
-| LHCb object | Operator reading | MELT reading |
-|---|---|---|
-| annular $(C_V,C_A)$ likelihood | rate fixes $C_V^2+C_A^2$ | Born-like modulus readout |
-| lower $C_V$ | vector coefficient deficit | one bridge/ballast unit missing |
-| $DD^{\ast}$ step in $C_V$ | vector threshold response | CP³→CP⁴ channel opens |
-| $C_A(q^2)$ slope | axial coefficient not fully local | incomplete coarse-graining |
-| $DD^{\ast}-J/\psi\simeq\rho$ | light-vector mode lock | explains vector, not scalar, selector |
+| LHCb object | Operator reading | MELT reading | Status |
+|---|---|---|---|
+| annular $(C_V,C_A)$ likelihood | rate fixes $C_V^2+C_A^2$ | Born-like modulus readout | structural, pre-data |
+| $DD^{\ast}$ step in $C_V$ | vector threshold response | CP³→CP⁴ channel opens | empirical, $2.6\sigma$ |
+| $C_A(q^2)$ slope | axial coefficient not fully local | incomplete coarse-graining | empirical, $2\sigma$ |
+| $DD^{\ast}-J/\psi\simeq\rho$ | $X(3872)$ at threshold | mode-lock explains vector selection | known physics, MELT framing |
+| $\Delta C_V \approx 0.873$ | vector coefficient deficit | $\approx 1$ ballast bit missing | scale check, not test |
 
-The annular part is the conceptual bridge. In ordinary operator language,
-the short-distance branching fraction constrains the combination
-$C_V^2+C_A^2$. In MELT language, this is a Born-like readout of a two-component
-coefficient vector. The fit does not initially know the orientation; it only
-recovers it through interference against nonlocal amplitudes. That is exactly
-the kind of "phase hidden in the cross-channel" behavior expected if the
-observable is downstream of a modulus projection.
+The annular part is the conceptual lead. In ordinary operator language, the
+short-distance branching fraction constrains the combination $C_V^2+C_A^2$.
+In MELT language, this is a Born-like readout of a two-component coefficient
+vector: the fit initially knows only the radius and recovers orientation
+through interference against nonlocal amplitudes. That is "phase hidden in
+the cross-channel," which is the structural prediction of any modulus-first
+projection. **This is the only argument here that does not depend on a fitted
+number;** an annulus would appear in any $B^+\to K^+\ell^+\ell^-$ rate
+constraint, regardless of fit point.
 
-Numerically, using the approximate headline values:
-
-$$
-R_\mathrm{SM}=\sqrt{4.273^2+(-4.166)^2}=5.968,
-$$
+For scale, the SM and fit radii in coefficient space are
 
 $$
-R_\mathrm{fit}\approx\sqrt{3.4^2+(-3.0)^2}=4.534.
+R_\mathrm{SM}=\sqrt{C_V^2+C_A^2}\big|_\mathrm{SM}
+=\sqrt{4.273^2+4.166^2}=5.968,
 $$
 
-The radial deficit is
-
 $$
-\Delta R\approx1.433.
+R_\mathrm{fit}\approx\sqrt{3.4^2+3.0^2}\approx 4.5 \pm 0.2.
 $$
 
-That is close to the size of the reported threshold step:
+The radial deficit $\Delta R\approx 1.4 \pm 0.3$ is of the same order as
+the reported step amplitude $|\Delta_{DD^{\ast}}|=1.37\pm 0.53$. We note
+this scale match but do not claim it as a structural identity: $\Delta R$ is
+a global 2D-radius shift while $\Delta_{DD^{\ast}}$ is a localised step in
+$C_V$ at one threshold, and there is no a-priori reason for them to coincide
+unless the threshold gate absorbs the entire radial shrinkage. That would be
+a further claim, not implied by the present data.
 
-$$
-\frac{\Delta R}{|\Delta_{DD^{\ast}}|}
-=\frac{1.433}{1.37}
-\approx1.046.
-$$
+## 4. The DD* Gate, the Rho Mode Lock, and the X(3872) Anchor
 
-Again, this is a working ledger comparison, not a substitute for the LHCb
-fit. The point is that the size of the annular shrinkage and the size of the
-reported vector threshold gate live on the same scale.
+### 4.1 Mass arithmetic
 
-## 4. The DD* Gate and the Rho Mode Lock
-
-The strongest compact observation is pure mass arithmetic:
+The compact observation is pure mass arithmetic:
 
 $$
 m_{DD^{\ast}}=3871.70\,\mathrm{MeV},\qquad
-m_{J/\psi}=3096.65\,\mathrm{MeV}.
-$$
-
-Therefore
-
-$$
+m_{J/\psi}=3096.65\,\mathrm{MeV},\qquad
 m_{DD^{\ast}}-m_{J/\psi}=775.05\,\mathrm{MeV}.
 $$
 
-The $\rho(770)$ mass is approximately
-
-$$
-m_\rho=775.26\,\mathrm{MeV}.
-$$
-
-So the difference is
+The $\rho(770)$ mass is $m_\rho=775.26\,\mathrm{MeV}$, so
 
 $$
 (m_{DD^{\ast}}-m_{J/\psi})-m_\rho=-0.21\,\mathrm{MeV},
 $$
 
-or a relative ratio of about $0.999729$.
+a relative residual of $2.7\times10^{-4}$.
 
-This matters because LHCb's reported threshold response is in $C_V$, the
-vector coefficient. The open-charm $DD^{\ast}$ threshold is almost exactly one
-light-vector quantum above $J/\psi$. In a conservative Standard Model reading
-this is a notable alignment of thresholds and vector resonances. In the MELT
-reading it is the proposed reason the anomaly selects a vector operator rather
-than a scalar one: the threshold opens as a mode-locked vector gate.
+### 4.2 The X(3872) physical anchor
 
-There is a second, weaker charm-ladder marker:
+This near-coincidence is not unprecedented. The exotic state $X(3872)$, also
+known as $\chi_{c1}(3872)$, has $J^{PC}=1^{++}$ and PDG mass
 
 $$
-m_{DD^{\ast}}-m_{DD}=142.02\,\mathrm{MeV},
+m_{X(3872)}=3871.64\pm0.06\,\mathrm{MeV},
 $$
 
+i.e. it sits within $0.05\,\mathrm{MeV}$ of $m_{DD^{\ast}}$. A
+well-established decay channel is $X(3872)\to J/\psi\,\rho^0\to
+J/\psi\,\pi^+\pi^-$. The $X(3872)$ is therefore a physically realised
+$DD^{\ast}\,$/$\,J/\psi\,\rho$ admixture sitting at the exact mass where
+LHCb reports the vector-sector step. The "mode lock" between $J/\psi$ and
+$\rho$ is not a MELT-introduced concept; it is a measured spectroscopic
+feature of charmonium, and the MELT reading is that the $C_V$ step in this
+channel is a manifestation of that admixture in the Wilson-coefficient
+ledger.
+
+### 4.3 Cross-channel specificity check
+
+If the $J/\psi+\rho$ structure were a generic light-vector lock, analogous
+threshold-resonance differences should reproduce other well-known light
+vectors $\omega(782)$ or $\phi(1020)$. Direct check:
+
+| Difference | Value (MeV) | Light vector candidate | Match? |
+|---|---:|---:|---|
+| $m_{DD^{\ast}}-m_{J/\psi}$ | $775.05$ | $m_\rho=775.26$ | $-0.21\,\mathrm{MeV}$ ✓ |
+| $m_{DD}-m_{\eta_c}$ | $745.78$ | $m_\rho=775.26$ | $-29.5\,\mathrm{MeV}$ × |
+| $m_{D^{\ast}D^{\ast}}-m_{\psi(2S)}$ | $327.60$ | none in $700{-}800$ band | × |
+| $m_{D^{\ast}D^{\ast}}-m_{\psi(3770)}$ | $240.00$ | none | × |
+
+Only the $J/\psi+\rho$ row matches at the $0.03\%$ level. The other
+threshold-charmonium differences fall in regions with no similarly close
+light-vector partner. This rules out the trivial reading "any threshold sits
+one light-vector quantum above some charmonium" and supports the specific
+$X(3872)$-mediated coupling reading: the lock is between $J/\psi$ and $\rho$,
+not between any threshold and any vector.
+
+### 4.4 Scalar null test
+
+A separate falsification check: if the gate were generically light-meson
+mediated (not specifically vector), an analogous scalar-meson difference
+should also align. The closest scalar test is
+
 $$
-m_{D^{\ast}D^{\ast}}-m_{DD^{\ast}}=142.00\,\mathrm{MeV}.
+m_{DD^{\ast}}-m_{\eta_c}=3871.70-2983.90=887.80\,\mathrm{MeV},
 $$
 
-This is simply the repeated $D^{\ast}-D$ spin gap. In MELT language it may echo the
-real leg of the local $\Delta=14+28i$ ledger at a factor of ten, but this is
-only a weak marker. The $\rho$ lock is much cleaner.
+which falls $\approx 100\,\mathrm{MeV}$ below the broad $f_0(980)$ and has
+no nearby narrow scalar. By the same precision standard that makes the $\rho$
+match notable ($0.21\,\mathrm{MeV}$ residual), this scalar test fails by
+two orders of magnitude. The threshold gate is specifically vector-selecting,
+consistent with LHCb's report that the threshold step appears in $C_V$ and
+not in a scalar/tensor channel.
+
+### 4.5 Repeated spin gap (noted, not claimed)
+
+For completeness, the charm-ladder mass differences
+
+$$
+m_{DD^{\ast}}-m_{DD}=142.02\,\mathrm{MeV},\qquad
+m_{D^{\ast}D^{\ast}}-m_{DD^{\ast}}=142.00\,\mathrm{MeV}
+$$
+
+reproduce the standard $D^{\ast}{-}D$ spin gap. We do not claim a MELT
+mapping for this gap in this note.
 
 ## 5. What the Public Data Say Before the Full Fit
 
 The open Zenodo files were downloaded and checked locally. The selected
-dataset contains $3,363,943$ unbinned dimuon mass values. It is dominated by
+dataset contains $3{,}363{,}943$ unbinned dimuon mass values. It is dominated by
 the $J/\psi$ and $\psi(2S)$ regions:
 
 | Diagnostic | Value |
 |---|---:|
-| event count | $3,363,943$ |
+| event count | $3{,}363{,}943$ |
 | median mass | $3097.328\,\mathrm{MeV}/c^2$ |
 | 1st percentile | $3074.131\,\mathrm{MeV}/c^2$ |
 | 99th percentile | $3693.694\,\mathrm{MeV}/c^2$ |
@@ -294,42 +344,60 @@ ledger object.
 
 ## 6. Falsification and Next Work
 
-The MELT reading should be treated as a structured hypothesis with clear
-failure modes.
+The MELT reading is a structured hypothesis with clear failure modes.
 
 It weakens if:
 
-1. a reproduction of the LHCb likelihood absorbs the $DD^{\ast}$ step into smooth
-   charm-loop modeling;
+1. a reproduction of the LHCb likelihood absorbs the $DD^{\ast}$ step into
+   smooth charm-loop modelling once the $X(3872)$ admixture is included
+   explicitly;
 2. the step moves away from the vector coefficient when alternative form
    factors are used;
 3. the annular $(C_V,C_A)$ profile disappears in a more complete likelihood;
-4. the $J/\psi+\rho$ threshold lock has no explanatory value across related
-   channels.
+4. analogous $b\to s\mu^+\mu^-$ channels with similar charm-threshold reach
+   show no comparable vector-specific gate.
 
 It strengthens if:
 
-1. the $DD^{\ast}$ response remains vector-specific;
-2. the threshold gate persists under HPQCD/FNAL-MILC variations;
-3. analogous $J/\psi+\rho$ or vector-mode locks appear in related
-   $b\to s\mu^+\mu^-$ channels;
+1. the $DD^{\ast}$ response remains vector-specific under HPQCD/FNAL-MILC
+   variation;
+2. an explicit $X(3872)\to J/\psi\,\rho$ amplitude in the nonlocal model
+   absorbs the step at a magnitude consistent with measured
+   $\mathcal{B}(X(3872)\to J/\psi\,\rho)$;
+3. analogous threshold-charmonium-vector-meson alignments
+   (e.g. $B^0\to K^{\ast0}\mu^+\mu^-$ at the same $m_{\mu\mu}$ threshold)
+   reproduce the gate;
 4. the $C_A(q^2)$ drift remains as a gradual scale term while $C_V$ carries
    the discrete threshold gate.
 
-The next technical step is not another verbal interpretation. It is a
-minimal amplitude-level reproduction over the charm window using the published
-efficiency and resolution curves: smooth continuum, $\psi(2S)$,
-$\psi(3770)$, $\psi(4040)$, $\psi(4160)$, and a $DD^{\ast}$ sigmoid gate, compared
-by likelihood rather than by raw counts. Only then should the $0.873$ vector
-deficit and the $0.8901$ ballast marker be promoted from "numerical hook" to
-"quantitative claim."
+The next technical steps are concrete:
+
+1. **Reading-uncertainty reduction.** Extract the absolute $(C_V^\mathrm{fit},
+   C_A^\mathrm{fit})$ from the published likelihood support files or from a
+   local refit, replacing the $\pm 0.2$ visual readings used in §2.3 and §3.
+   Only then should $\Delta C_V/0.8901$ be promoted from "scale check" to
+   "quantitative claim."
+2. **Minimal charm-window refit.** A binned-Poisson or unbinned amplitude
+   reproduction over $3400$ to $4250\,\mathrm{MeV}/c^2$ using the published
+   efficiency and resolution curves: smooth continuum, $\psi(2S)$,
+   $\psi(3770)$, $\psi(4040)$, $\psi(4160)$, and either a $DD^{\ast}$ sigmoid
+   gate or an explicit $X(3872)$ Breit–Wigner with its measured $J/\psi\,\rho$
+   coupling.
+3. **Cross-channel $X(3872)$ test.** Check whether $B^0\to K^{\ast0}\mu^+\mu^-$
+   shows the same $C_V$ step at $m_{\mu\mu}=m_{X(3872)}$.
 
 ### References and Framework Anchors
 
 - LHCb collaboration, *Measurement of the local and nonlocal amplitudes in
-  $B^+\to K^+\mu^+\mu^-$ decays*, arXiv:2603.12477.
-- LHCb Zenodo data release, DOI `10.5281/zenodo.19497184`.
-- MELT bridge inventory: CP³/CP⁴/CP⁵ as hadron-bus/domain-wall/lepton-bus
-  bookkeeping.
+  $B^+\to K^+\mu^+\mu^-$ decays*, arXiv:2603.12477 (LHCb-PAPER-2025-055).
+- LHCb public data release for the above paper, Zenodo
+  DOI `10.5281/zenodo.19497184` (LHCb's data, used here only for diagnostics).
+- Particle Data Group, $\chi_{c1}(3872)/X(3872)$ listing:
+  $m=3871.64\pm0.06\,\mathrm{MeV}/c^2$, $J^{PC}=1^{++}$, with $J/\psi\,\rho^0$
+  and $D^0\overline{D}{}^{\ast 0}$ decay channels.
+- MELT bridge inventory: CP³+CP⁴+CP⁵ = 28+0+4 = 32 bit
+  (hadron-bus / domain-wall / lepton-bus).
+- MELT ballast-bit anchor: $K_S$ first-split Shannon entropy
+  $H_1=0.8901\,\mathrm{bit}$.
 - MELT Born/off-diagonal inventory: modulus readout versus retained
   off-diagonal phase.
