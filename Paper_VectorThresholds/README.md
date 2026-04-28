@@ -198,10 +198,12 @@ Integrating over $\cos\theta_\ell$ produces the $q^2$-only spectrum used in
 the fit, schematically
 
 $$
-\frac{d\Gamma_\mu}{dq^2}\;\propto\;a(q^2)\,|C_A|^2\;+\;b(q^2)\,|C_V^{\mathrm{eff}}|^2,
+\frac{d\Gamma_\mu}{dq^2}\;\propto\;a(q^2)\,|C_A|^2\;+\;b(q^2)\,\big|\,C_V^{\mathrm{eff}}\,f_+ + 2(C_7^{\mathrm{eff}}+C_7')\tfrac{m_b+m_s}{M_B+M_K}\,f_T\,\big|^2,
 $$
 
-with $C_V^{\mathrm{eff}}=C_V+(\text{q}^2\text{-dependent nonlocal and }C_7\text{ pieces})$.
+where $C_V^{\mathrm{eff}}\equiv C_9^{\mathrm{eff}}+C_9'$ in the LHCb
+convention and the fixed $C_7$ tensor term sits as a separate additive
+piece inside the same vector-sector modulus.
 **There is no $V$–$A$ cross-term in the rate-only fit.** The annular shape
 of the $(C_V,C_A)$ likelihood is the iso-rate contour of
 
@@ -214,8 +216,10 @@ of the same order, giving an approximate circle. In MELT-Born language: the
 rate-only fit reads two independent moduli; the relative phase between $C_V$
 and $C_A$ does not enter.
 
-What recovers $C_V$ vs $C_A$ direction is **not** an angular variable —
-there is none in this decay — but the $m_{\mu\mu}$-spectrum *shape*. The
+What recovers $C_V$ vs $C_A$ direction is **not** an angular observable
+retained in this analysis — $\cos\theta_\ell$ enters only through the
+efficiency integration in Eq. 18, and no linear angular handle is kept —
+but the $m_{\mu\mu}$-spectrum *shape*. The
 nonlocal amplitudes $Y_{c\bar c}(q^2)$ (charm loops, $\psi$ resonances) and
 $Y_\mathrm{light}(q^2)$ ($\rho/\omega/\phi$) inside $C_V^\mathrm{eff}$ carry
 nontrivial $q^2$-dependent phases. $C_V$ interferes with these complex
